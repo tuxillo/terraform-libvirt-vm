@@ -78,7 +78,8 @@ resource "libvirt_domain" "virt-machine" {
     connection {
       type        = "ssh"
       user        = var.ssh_admin
-      host        = self.network_interface.0.addresses.0
+      host        = var.ssh_host_override != null ? var.ssh_host_override : self.network_interface.0.addresses.0
+      port        = var.ssh_port_override
       private_key = var.ssh_private_key != null ? file(var.ssh_private_key) : null
       timeout     = "2m"
     }

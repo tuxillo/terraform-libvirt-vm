@@ -67,6 +67,8 @@ No modules.
 | <a name="input_ssh_admin"></a> [ssh\_admin](#input\_ssh\_admin) | Admin user with ssh access | `string` | `"ssh-admin"` | no |
 | <a name="input_ssh_keys"></a> [ssh\_keys](#input\_ssh\_keys) | List of public ssh keys | `list(string)` | `[]` | no |
 | <a name="input_ssh_private_key"></a> [ssh\_private\_key](#input\_ssh\_private\_key) | Private key for SSH connection test | `any` | `null` | no |
+| <a name="input_ssh_host_override"></a> [ssh\_host\_override](#input\_ssh\_private\_key) | Host override for SSH connection test | `string` | `null` | no |
+| <a name="input_ssh_port_override"></a> [ssh\_port\_override](#input\_ssh\_private\_key) | Port override for SSH connection test | `string` | `"22"` | no |
 | <a name="input_system_volume"></a> [system\_volume](#input\_system\_volume) | System Volume size (GB) | `number` | `10` | no |
 | <a name="input_time_zone"></a> [time\_zone](#input\_time\_zone) | Time Zone | `string` | `"UTC"` | no |
 | <a name="input_vcpu"></a> [vcpu](#input\_vcpu) | Number of vCPUs | `number` | `1` | no |

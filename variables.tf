@@ -167,6 +167,17 @@ variable "ssh_private_key" {
   default     = null
 }
 
+variable "ssh_host_override" {
+  description = "Host for SSH connection test"
+  default     = null
+}
+
+variable "ssh_port_override" {
+  description = "Port for SSH connection test"
+  default     = 22
+}
+
+
 variable "runcmd" {
   description = "Extra commands to be run with cloud init"
   type        = list(string)
