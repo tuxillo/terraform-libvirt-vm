@@ -177,6 +177,16 @@ variable "ssh_port_override" {
   default     = 22
 }
 
+variable "ssh_bastion_connect" {
+  description = "Use a bastion host to connect through"
+  default     = {
+    host    = ""
+    port    = "22"
+    user    = "root"
+    passwd  = ""
+    privkey = null
+  }
+}
 
 variable "runcmd" {
   description = "Extra commands to be run with cloud init"
