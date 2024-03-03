@@ -120,6 +120,13 @@ variable "bridge" {
   default     = "virbr0"
 }
 
+variable "mac_address" {
+  description = "MAC address"
+  type        = list
+  default     = []
+}
+
+
 variable "ip_address" {
   description = "List of IP addresses"
   type        = list(string)

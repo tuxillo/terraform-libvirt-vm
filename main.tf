@@ -25,6 +25,7 @@ resource "libvirt_domain" "virt-machine" {
     bridge         = var.bridge
     wait_for_lease = true
     hostname       = format("${var.vm_hostname_prefix}%02d", count.index + var.index_start)
+    mac            = length(var.mac_address) == var.vm_count ? element(var.mac_address, count.index) : null
   }
 
   xml {
